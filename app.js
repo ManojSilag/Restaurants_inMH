@@ -7,6 +7,7 @@ function renderCafe(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
     let city = document.createElement('span');
+
     let cross = document.createElement('div');
 
    li.setAttribute('data-id',doc.id);
@@ -14,10 +15,24 @@ function renderCafe(doc){
    city.textContent = doc.data().city;
    cross.textContent = 'X';
 
+
+
+    let cross = document.createElement('div');
+
+
+   li.setAttribute('data-id',doc.id);
+   name.textContent = doc.data().name;
+   city.textContent = doc.data().city;
+
+   cross.textContent = 'X';
+
+
+
    //appending
    li.appendChild(name);
    li.appendChild(city);
    cafelist.appendChild(li);
+
    li.appendChild(cross);
 
    //Deleting data
@@ -28,6 +43,7 @@ function renderCafe(doc){
         db.collection("restaurants").doc(id).delete();
        
    })
+
 }
 
 //Getting Data
