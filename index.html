@@ -12,22 +12,26 @@
 <body>
     <h1>Restaurants</h1>
     <div class="content">
-        <form id="add-cafe-forms"></form>
+        <form id="add-cafe-forms">
+            <input type="text" name="name" placeholder="Restaurant">
+            <input type="text" name="city" placeholder="Restaurant City">
+            <button>Add Restaurant</button>
+        </form>
         <ul id="cafe-list"></ul>
     </div>
 
     
     
     <script>
-    // Initialize Firebase
-    var config = {
-    apiKey: "AIzaSyCgIRftoD-_lcJ_nzWVlBrHuimCgEVdNEo",
-    authDomain: "my-first-project-82fb2.firebaseapp.com",
-    databaseURL: "https://my-first-project-82fb2.firebaseio.com",
-    projectId: "my-first-project-82fb2",
-    storageBucket: "my-first-project-82fb2.appspot.com",
-    messagingSenderId: "67832302207"
-    };
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAUxsNlCnL6RF-cRouHSycey2cc-pyogg0",
+    authDomain: "my-first-project-66c58.firebaseapp.com",
+    databaseURL: "https://my-first-project-66c58.firebaseio.com",
+    projectId: "my-first-project-66c58",
+    storageBucket: "my-first-project-66c58.appspot.com",
+    messagingSenderId: "732734081733"
+  };
     firebase.initializeApp(config);
     const db = firebase.firestore();
     db.settings({timestampsInSnapshots: true })
