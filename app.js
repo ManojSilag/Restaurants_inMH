@@ -10,12 +10,22 @@ function renderCafe(doc){
 
     let cross = document.createElement('div');
 
+   li.setAttribute('data-id',doc.id);
+   name.textContent = doc.data().name;
+   city.textContent = doc.data().city;
+   cross.textContent = 'X';
+
+
+
+    let cross = document.createElement('div');
+
 
    li.setAttribute('data-id',doc.id);
    name.textContent = doc.data().name;
    city.textContent = doc.data().city;
 
    cross.textContent = 'X';
+
 
 
    //appending
@@ -37,7 +47,24 @@ function renderCafe(doc){
 }
 
 //Getting Data
-db.collection("restaurants").get().then((snapshot) => {
+// 1 ==>  sorting restaurants list with city name Ahmednagar
+// db.collection("restaurants").where('city', '==', 'Ahmednagar').get().then((snapshot) => {
+//     snapshot.docs.forEach(doc => {
+//          renderCafe(doc);
+//         // console.log(doc.id);
+//     })
+// });
+
+// 2==> sorting restaurants list with name and city alphabetically
+// db.collection("restaurants").orderBy('name').get().then((snapshot) => {
+//     snapshot.docs.forEach(doc => {
+//          renderCafe(doc);
+//         // console.log(doc.id);
+//     })
+// });
+
+//3 ==> using both where() and order()
+db.collection("restaurants").where('city', '==', 'Ahmednagar').orderBy('name').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
          renderCafe(doc);
         // console.log(doc.id);
