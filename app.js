@@ -1,4 +1,3 @@
-
 const cafelist = document.querySelector('#cafe-list');
 const form =document.querySelector('#add-cafe-forms');
 
@@ -77,7 +76,7 @@ form.addEventListener('submit', (e) => {
     form.city.value='';
 });
 
-//real -time listnet
+//real -time listner
 db.collection("restaurants").orderBy('city').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     // console.log(changes);
@@ -88,7 +87,10 @@ db.collection("restaurants").orderBy('city').onSnapshot(snapshot => {
             let li = cafelist.querySelector('[data-id=' + data.doc.id +']');
             cafelist.removeChild(li);
         }
-        
     })
-    
-})
+});
+
+//update method
+// db.collection('restaurants').doc('FRWjnICXpvlsXVKlZaDH').update({
+//     name: 'Mydabbha'
+//     });
