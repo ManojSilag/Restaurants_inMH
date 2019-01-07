@@ -1,14 +1,20 @@
 body{
-    background: #61a8aa;
     font-family: ubuntu;
+    height: 100vh;
+    background: #61a8aa url("https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80") no-repeat center center / cover ;
+    overflow: hidden;
 }
 
 h1{
     color: #fff;
+    background: rgb(162, 217, 224);
     font-size: 64px;
     letter-spacing: 2px;
     margin-top: 80px;
     text-align: center;
+    max-width: 960px;
+    margin: 30px auto;
+    letter-spacing: 1px;
 }
 
 .content{
@@ -37,7 +43,7 @@ li{
 
 li:nth-child(even){
     padding: 20px;
-    background: #e0eff5;
+    background: #deeef5;
 }
 
 li span{
@@ -95,7 +101,7 @@ button{
     border-radius: 10px;
     padding: 13px;
     width: 14%;
-    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+    box-shadow: -4px 0px 5px rgba(12, 12, 12, 0.1);
     font-weight: bold;
     font-family: ubuntu;
     letter-spacing: 1px;
@@ -103,4 +109,8 @@ button{
 }
 .cross:hover{
     color: rgb(140, 10, 247);
+}
+button:hover{
+    background: rgb(21, 18, 99);
+    color: rgb(144, 233, 233);
 }
