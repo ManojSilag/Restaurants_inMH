@@ -7,6 +7,7 @@ function renderCafe(doc){
     let name = document.createElement('span');
     let city = document.createElement('span');
     let cross = document.createElement('div');
+    cross.className = 'cross';
 
    li.setAttribute('data-id',doc.id);
    name.textContent = doc.data().name;
@@ -76,7 +77,7 @@ form.addEventListener('submit', (e) => {
     form.city.value='';
 });
 
-//real -time listner
+//real -time listnet
 db.collection("restaurants").orderBy('city').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     // console.log(changes);
