@@ -26,7 +26,6 @@ function renderCafe(doc){
        let id = e.target.parentElement.getAttribute('data-id');
         //console.log(id); => ouput example -- 0x97CWfJzOF7Vep94cEi
         db.collection("restaurants").doc(id).delete();
-       
    })
 }
 
